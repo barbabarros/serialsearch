@@ -20,7 +20,7 @@ struct teste {
 
 void serial(teste t[]) {
     int busca;
-    cout << "Qual o codigo? for(vazio) ";
+    cout << " for(vazio): Qual o codigo? ";
     cin >> busca;
     auto inicio = chrono::high_resolution_clock::now();
 
@@ -30,14 +30,12 @@ void serial(teste t[]) {
         cout << "for(vazio) " << i+1 << "x" << " Codigo: " << t[i].codigo << " Nome: " << t[i].nome << endl << endl;
     }
 
-    auto final = chrono::high_resolution_clock::now();
-    auto tempo = chrono::duration_cast<chrono::microseconds>(final - inicio);
-    cout << "Tempo decorrido: " << tempo.count() << " microssegundos" << endl << endl;
+    cout << "Tempo decorrido: " << chrono::duration_cast<chrono::microseconds>(chrono::high_resolution_clock::now() - inicio).count() << " microssegundos" << endl << endl;
 }
 
 void serial1(teste t[]) {
     int busca;
-    cout << "Qual o codigo? for() ";
+    cout << "for(): Qual o codigo? ";
     cin >> busca;
     auto inicio = chrono::high_resolution_clock::now();
 
@@ -46,15 +44,13 @@ void serial1(teste t[]) {
             cout << "for() " << i+1 << "x" << " Codigo: " << t[i].codigo << " Nome: " << t[i].nome << endl << endl;
         }
     }
-
-    auto final = chrono::high_resolution_clock::now();
-    auto tempo = chrono::duration_cast<chrono::microseconds>(final - inicio);
-    cout << "Tempo decorrido: " << tempo.count() << " microssegundos" << endl << endl;
+    
+    cout << "Tempo decorrido: " << chrono::duration_cast<chrono::microseconds>(chrono::high_resolution_clock::now() - inicio).count() << " microssegundos" << endl << endl;
 }
 
 void serial2(teste t[]) {
     int busca;
-    cout << "Qual o codigo? while() ";
+    cout << "while() vazio: Qual o codigo? ";
     cin >> busca;
     auto inicio = chrono::high_resolution_clock::now();
 
@@ -64,9 +60,7 @@ void serial2(teste t[]) {
         cout << "while() " << i+1 << "x" << " Codigo: " << t[i].codigo << " Nome: " << t[i].nome << endl << endl;
     }
 
-    auto final = chrono::high_resolution_clock::now();
-    auto tempo = chrono::duration_cast<chrono::microseconds>(final - inicio);
-    cout << "Tempo decorrido: " << tempo.count() << " microssegundos" << endl << endl;
+    cout << "Tempo decorrido: " << chrono::duration_cast<chrono::microseconds>(chrono::high_resolution_clock::now() - inicio).count() << " microssegundos" << endl << endl;
 }
 
 
