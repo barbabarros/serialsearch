@@ -41,8 +41,7 @@ void serial1(teste t[]) {
     cin >> busca;
     auto inicio = chrono::high_resolution_clock::now();
 
-    int i = 0;
-    for (; busca >= t[i].codigo && i < 10; i++) {
+    for (int i = 0; busca >= t[i].codigo && i < 10; i++) {
         if (busca == t[i].codigo) {
             cout << "for() " << i+1 << "x" << " Codigo: " << t[i].codigo << " Nome: " << t[i].nome << endl << endl;
         }
@@ -74,15 +73,15 @@ void serial2(teste t[]) {
 int main() {
     teste t[10] = {
         {2,"aa"},
-        {3,"aa"},
-        {4,"aa"},
-        {5,"aa"},
-        {8,"aa"},
-        {11,"aa"},
-        {21,"aa"},
-        {22,"aa"},
-        {330,"aa"},
-        {5600,"aa"},
+        {3,"bb"},
+        {4,"cc"},
+        {5,"dd"},
+        {8,"ee"},
+        {11,"ff"},
+        {21,"gg"},
+        {22,"hh"},
+        {330,"ww"},
+        {5600,"zz"},
     };
     //leitura(t);
     serial(t);
